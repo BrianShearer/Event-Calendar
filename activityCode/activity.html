@@ -1,0 +1,440 @@
+<!-- code from bootstrap activity -->
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Bootstrap Demo</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <!-- Creates the Overall Grid -->
+  <div class="container">
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Header</h1>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-sm-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt optio provident tempora amet, eveniet et, eum illum, culpa laborum dicta recusandae magni architecto. Illo saepe facilis, unde. Debitis, atque, doloremque?</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dolorum perferendis voluptates error ullam placeat repellendus. Repellendus error repellat veritatis recusandae voluptates earum rerum consectetur itaque, ipsam nihil. Alias, nemo.</p>
+      </div>
+      <div class="col-sm-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores ratione sint ex porro excepturi non dolorum, ullam ea quae vel earum, soluta obcaecati natus. Eligendi iusto accusantium mollitia debitis assumenda!</p>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="row">
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+      <div class="col-sm-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur optio dolorem dolores odio alias perferendis, commodi cum. Natus libero cum dolore officia quia eveniet modi reprehenderit soluta ratione quisquam? Sequi.</p>
+      </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti illo voluptates blanditiis nisi! Ullam dolore aspernatur, ratione error similique veniam iusto, labore repellat eaque nostrum optio doloribus illo nihil dolor?</p>
+      </div>
+      <div class="col-sm-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sequi ex quam quia iste, nemo molestias dolor, qui dolorem voluptatibus ipsa maxime voluptas et deserunt porro repellendus veritatis nesciunt quisquam.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<!-- end of code from bootstrap activity  -->
+
+<!-- code from jquery activity sandwich -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Sandwich Click</title>
+  </head>
+
+  <body>
+    <h1>Click to Eat Sandwich</h1>
+    <!-- Create three button elements each with an id and corresponding content for our sandwiches -->
+    <button id="pbj">Peanut Butter Jelly</button>
+    <button id="grilledcheese">Grilled Cheese</button>
+    <button id="roastbeef">Roast Beef</button>
+
+    <!-- BONUS: Render an image for each click event. You will need to declare an empty `<div>` with an id of `#image-div` for this -->
+    <div id="image-div"></div>
+
+    <!-- Link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+      // Create three global variables for tracking the number of sandwiches eaten
+      var pbjCounter = 0;
+      var grilledCheeseCounter = 0;
+      var roastBeefCounter = 0;
+
+      // Here we create various "on click" events which capture clicks
+      // Inside each click event is the code to create an alert, update the counter, and show the updated count.
+      // Take note that you can chain events onto an element
+      // With this even if our ids are created at a later date our events will still always work
+      $('#pbj').on('click', function() {
+        alert('Mmm... Peanut Butter Jelly Time.');
+        pbjCounter++;
+        alert("You've eaten " + pbjCounter + ' PB&J sandwiches');
+
+        // BONUS
+        $('#image-div').html(
+          "<img src='https://i1.wp.com/snotapwi.com/wp-content/uploads/2017/03/PBJ-Sandwiches.jpg?resize=590%2C368&ssl=1' />"
+        );
+      });
+
+      $('#grilledcheese').on('click', function() {
+        alert('Nom nom nom. Gooey Gooey Grilled Cheese!');
+        grilledCheeseCounter++;
+        alert(
+          "You've eaten " + grilledCheeseCounter + ' grilled cheese sandwiches'
+        );
+
+        // BONUS
+        $('#image-div').html(
+          "<img src='http://cdn.funcheap.com/wp-content/uploads/2014/04/The-Perfect-Grilled-Cheese-Sandwich-800-158111.jpg' />"
+        );
+      });
+
+      $('#roastbeef').on('click', function() {
+        alert(
+          "No qualms about animal rights here. I'm all about that roast beef."
+        );
+        roastBeefCounter++;
+        alert("You've eaten " + roastBeefCounter + ' roast beef sandwiches');
+
+        // BONUS
+        $('#image-div').html(
+          "<img src='https://www.cscassets.com/recipes/wide_cknew/wide_25336.jpg' />"
+        );
+      });
+    </script>
+  </body>
+</html>
+<!-- end of code from jquesry -->
+
+<!-- code from bootstrap activity with cat  -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bootstrap Card Layout Activity</title>
+
+    <!-- Import Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Add a responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <span class="navbar-brand mb-1 h1">Navbar</span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Bonus -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Nav -->
+    <div class="container">
+      <!-- Create rows and columns to match the given design -->
+      <div class="row">
+        <div class="col-md-8">
+          <!-- Add a heading "About Me" -->
+          <h1>About Me</h1>
+          <div class="row">
+            <div class="col-md-3">
+              <!-- Add an image -->
+              <img
+                src="http://placehold.it/150x150"
+                alt="Placeholder"
+                class="img-thumbnail"
+              />
+            </div>
+            <div class="col-md-9">
+              <!-- Add a paragraph of text -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                dignissim, felis ut dictum tristique, nibh erat feugiat libero,
+                sit amet fringilla mauris velit in mi. Duis tempus felis vitae
+                felis vulputate pretium. Nullam commodo, est ac auctor ornare,
+                eros nisi fringilla sem, non pulvinar tortor lorem sit amet sem.
+                Aenean quis erat facilisis, porttitor ex cursus, luctus enim.
+                Curabitur et metus in lacus tristique sagittis et in lorem. Nunc
+                id nisi et neque fringilla ultricies. Aenean at feugiat elit, a
+                posuere justo. Pellentesque egestas dolor et nisi venenatis, nec
+                fermentum urna fringilla. Etiam efficitur porta purus, id
+                posuere sem congue a.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Add a Card -->
+        <div class="col-md-4">
+          <div class="card mt-2">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- end of code from cat activity -->
+
+<!-- code from moment activity -->
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Moment JS Exercises</title>
+  </head>
+
+  <body>
+    <h1>✨ Open the console to see the magic ✨</h1> 
+    
+
+    <h2>JavaScript new Date</h2>
+
+    <div>
+      <p id="demo">aslkdjfsaf</p>
+    </div>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Import Moment.js here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script>
+      var randomDate = '02/23/1999';
+      // Convert the `randomDate` to the "MM/DD/YYYY" format using `moment()`
+      var randomFormat = 'MM/DD/YYYY';
+      var convertedDate = moment(randomDate, randomFormat);
+      // Log `convertedDate` into the console
+      console.log(convertedDate);
+
+      //  moment().todate()
+      //  var CurrentDate = moment();
+      // console.log('');
+
+      // moment().format("MMM Do YY");   
+      
+
+
+var d = moment()
+document.getElementById("demo").innerHTML = d;
+
+
+
+  
+
+
+      // Convert `convertedDate` into three other date formats of your choice using `.format()`
+      // Log them into the console
+      console.log(convertedDate.format('MM/DD/YY'));
+      console.log(convertedDate.format('MMM Do, YYYY hh:mm:ss'));
+      console.log(convertedDate.format('X'));
+      console.log('');
+
+      // Calculate the time in years, months, days between today and the `convertedDate` using `.toNow()` and `.diff()`
+      // Log them into the console
+      console.log(convertedDate.toNow());
+      console.log(convertedDate.diff(moment(), 'years'));
+      console.log(convertedDate.diff(moment(), 'months'));
+      console.log(convertedDate.diff(moment(), 'days'));
+      console.log('----------------------------------------');
+
+      // Calculate the number of days between the `convertedDate` and 02/14/2001
+      // Log it into the console
+      var newDate = moment('02/14/2001', randomFormat);
+      console.log(convertedDate.diff(newDate, 'days'));
+      console.log('----------------------------------------');
+
+      // Determine what day of the week and what week of the year the `convertedDate` falls on
+      // Log them into the console
+      console.log(convertedDate.format('dddd'));
+      console.log(convertedDate.format('Wo'));
+    </script>
+  </body>
+</html>
+
+<!-- code from jquery todo list  -->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solved: jQuery To-do List with localStorage</title>
+  </head>
+
+  <body>
+    <h1>Solved: jQuery To-do List with localStorage</h1>
+
+    <!-- Input Form -->
+    <form>
+      <span id="todo-item"
+        >To Do Item: <input id="to-do" type="text"/><input
+          id="add-to-do"
+          value="Add Item"
+          type="submit"
+      /></span>
+    </form>
+
+    <hr />
+
+    <!-- To-Do List -->
+    <div id="to-dos"></div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+
+    <script type="text/javascript">
+      // Declares a 'list' variable that holds the parsed to-do items retrieved from 'localStorage'
+      // If there is nothing in 'localStorage', sets the 'list' to an empty array
+      var list = JSON.parse(localStorage.getItem('todolist')) || [];
+
+      // Renders our to-dos to the page
+      function renderTodos(list) {
+        // Empties out the html
+        $('#to-dos').empty();
+
+        // Iterates over the 'list'
+        for (var i = 0; i < list.length; i++) {
+          // Creates a new variable 'toDoItem' that will hold a "<p>" tag
+          // Sets the `list` item's value as text of this <p> element
+          var toDoItem = $('<p>');
+          toDoItem.text(list[i]);
+
+          // Creates a button `toDoClose` with an attribute called `data-to-do` and a unique `id`
+          var toDoClose = $('<button>');
+          toDoClose.attr('data-to-do', i);
+
+          // Gives the button a class called 'checkbox'
+          toDoClose.addClass('checkbox');
+
+          // Adds a checkmark symbol as its text value
+          toDoClose.text('✓');
+
+          // Adds the button to the `toDoItem`
+          toDoItem = toDoItem.prepend(toDoClose);
+
+          // Adds 'toDoItem' to the To-Do List div
+          $('#to-dos').append(toDoItem);
+        }
+      }
+
+      $('#add-to-do').on('click', function(event) {
+        event.preventDefault();
+
+        // Get the to-do "value" from the textbox and store it as a variable using `.val()` and `.trim()`
+        // YOUR CODE HERE
+        //
+
+        // Add the new to-do to our local 'list' variable
+        // YOUR CODE HERE
+        //
+
+        // Update the to-dos on the page
+        // YOUR CODE HERE
+        //
+
+        // Save the to-dos into localStorage
+        // We need to use JSON.stringify to turn the list from an array into a string
+        // YOUR CODE HERE
+        //
+
+        // Clear the textbox when done using `.val()`
+        // YOUR CODE HERE
+        //
+      });
+
+      $(document).on('click', '.checkbox', function() {
+        // Get the `id` of the button from its data attribute and hold in a variable called 'toDoNumber'
+        // YOUR CODE HERE
+        //
+        // Delete the to-do with that `id` from our local `list` using `.splice()`
+        // YOUR CODE HERE
+        //
+        // Update the to-dos on the page
+        // YOUR CODE HERE
+        //
+        // Save the to-dos into localStorage
+        // We need to use JSON.stringify to turn the list from an array into a string
+        // YOUR CODE HERE
+        //
+      });
+
+      // Renders our to-dos on page load
+      renderTodos(list);
+    </script>
+  </body>
+</html>
